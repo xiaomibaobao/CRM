@@ -1,0 +1,190 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000;
+    -webkit-user-select: none;
+    background: #f1f1f1;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a, a:active, a:hover, a:visited, a:target {
+    text-decoration: none;
+    color: #000;
+}
+
+/*-----------------------------------*/
+.w50 {
+    width: 50px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.w200 {
+    width: 200px;
+}
+
+.w250 {
+    width: 250px;
+}
+
+.box {
+    margin: 20px auto;
+    padding: 20px;
+    width: 900px;
+    border: 1px solid green;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow:0 0 10px 5px #ccc;
+    background: #fff;
+}
+.table ul{
+    height: 350px;
+}
+.fn{
+    height: 60px;
+}
+.box .link {
+    float: left;
+    width:150px;
+    height:45px;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 45px;
+    font-size: 20px;
+    background: darkorange;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.link:hover {
+    background:tomato;
+    color: #fff;
+}
+
+.table h2 {
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    background: green;
+    color: #fff;
+}
+
+.table span {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+
+    /*--超出内容自动截取--*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.table span a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.table li {
+    height: 35px;
+    line-height: 35px;
+}
+
+.table li:nth-child(even) {
+    background: lightgreen;
+}
+
+.table li:hover {
+    background: lightblue;
+}
+/*----------bottom----------*/
+.bottom{
+    float: right;
+    margin-top: 20px;
+}
+.pageList{
+    float: left;
+    overflow: hidden;
+}
+.bottom span,.pageList li,.search{
+    float: left;
+    height:25px;
+    line-height: 25px;
+    border:1px solid black;
+    border-radius:3px;
+    text-align: center;
+    margin:0 5px;
+    width:50px;
+    cursor: pointer;
+}
+.pageList li{
+    width: 20px;
+    cursor: pointer;
+}
+.pageList li:hover{
+    background: lightgreen;
+}
+.pageList li.bg{
+    background: lime;
+}
+
+/*------------baiduSearchWrap-----------*/
+.baiduSearchWrap{
+    float: right;
+}
+.baiduSearch{
+    float: left;
+    position: relative;
+}
+.baiduSearch input{
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid #ccc;
+    padding: 0 5px;
+    outline: none;
+}
+.baiduSearch ul{
+    border: 1px solid #ccc;
+    border-top: 0;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    width: 210px;
+    background: #f9f9f9;
+    top:31px;
+}
+.baiduSearch ul li{
+    padding: 0 5px;
+}
+.baiduSearch ul li:hover{
+    background: #f5f5f5;
+}
+.baiduSearchWrap button{
+    width: 50px;
+    background: green;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CRM客户管理系统</title>
+    <link charset="UTF-8" type="text/css" rel="stylesheet" href="css/CRM.css"/>
+</head>
+<body>
+<div class="box">
+    <div class="fn">
+        <a href="add.html" class="link">增加客户信息</a>
+        <div class="baiduSearchWrap">
+            <div class="baiduSearch">
+                <input type="text" id="searchInput">
+                <ul></ul>
+            </div>
+            <button id="searchBtn">搜索</button>
+        </div>
+    </div>
+    <div class="table">
+        <h2>
+            <span class="w50">编号</span>
+            <span class="w200">姓名</span>
+            <span class="w50">年龄</span>
+            <span class="w200">电话</span>
+            <span class="w250">地址</span>
+            <span class="w150">操作</span>
+        </h2>
+        <ul id="boxList">
+
+        </ul>
+
+    </div>
+    <div id="bottom" class="bottom clear">
+        <span>FIRST</span>
+        <span>PREV</span>
+        <ul id="pageList" class="pageList">
+            <!--<li>1</li>-->
+            <!--<li>2</li>-->
+        </ul>
+        <span>NEXT</span>
+        <span>LAST</span>
+        <input type="search" class="search" id="search">
+    </div>
+</div>
+<script charset="utf-8" type="text/javascript" src="js/ajax.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/CRM.js"></script>
+</body>
+</html>

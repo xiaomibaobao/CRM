@@ -1,0 +1,106 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a, a:active, a:hover, a:visited, a:target {
+    text-decoration: none;
+    color: #000;
+}
+
+/*-----------------------------------*/
+.w50 {
+    width: 50px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.w200 {
+    width: 200px;
+}
+
+.w250 {
+    width: 250px;
+}
+
+.box {
+    margin: 20px auto;
+    padding: 20px;
+    width: 900px;
+    border: 1px solid green;
+    overflow: hidden;
+}
+
+.link {
+    display: block;
+    margin-bottom: 20px;
+    line-height: 35px;
+    font-size: 20px;
+    color: green;
+}
+
+.link:hover {
+    color: red;
+}
+
+.table {
+
+}
+
+.table h2 {
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    background: green;
+    color: #fff;
+}
+
+.table span {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+
+    /*--超出内容自动截取--*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.table span a{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.table li {
+    height: 35px;
+    line-height: 35px;
+}
+
+.table li:nth-child(even) {
+    background: lightgreen;
+}
+
+.table li:hover {
+    background: lightblue;
+}
+
+
+
+
+
+
+

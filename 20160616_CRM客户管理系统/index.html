@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-size:20px;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            -webkit-user-select: none;
+        }
+        input,button{
+            outline: none;
+            border: 0;
+        }
+        body{
+            background: #f1f1f1;
+        }
+        .box{
+            position: absolute;
+            margin: auto;
+            top:0;
+            left:0;
+            bottom: 0;
+            right:0;
+            width:400px;
+            height:300px;
+            padding:20px;
+            border:1px solid #ccc;
+            border-radius: 10px;
+            box-shadow:0 0 10px 5px #ccc;
+            background: -webkit-linear-gradient(to bottom,lightblue,lightgreen);
+            background: linear-gradient(to bottom,lightblue,lightgreen);
+        }
+        .box span:nth-of-type(1){
+            position: absolute;
+            top:30%;
+            left:10%;
+        }
+
+        .box input,.box span{
+            height: 36px;
+            line-height: 36px;
+            padding: 0 5px;
+        }
+        .box input:nth-of-type(1){
+            position: absolute;
+            top:30%;
+            left:30%;
+            border-radius: 5px;
+        }
+        .box span:nth-of-type(2){
+            position: absolute;
+            top:45%;
+            left:10%;
+        }
+        .box input:nth-of-type(2){
+            position: absolute;
+            top:45%;
+            left:30%;
+            border-radius: 5px;
+        }
+        .box button{
+            position: absolute;
+            display: block;
+            width:150px;
+            height:50px;
+            line-height:50px;
+            text-align: center;
+            top:70%;
+            left:50%;
+            margin-left:-75px ;
+            background: darkorange;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .box button:hover{
+            background: tomato;
+        }
+
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+<h2>员工管理平台</h2>
+<span>用户名:</span><input type="text" class="username" id="username"><br>
+<span>密  &nbsp;&nbsp;码:</span><input type="password" class="password" id="password">
+<button id="submit">登录</button>
+</div>
+
+<script type="text/javascript" charset="UTF-8" src="js/ajax.js"></script>
+<script type="text/javascript">
+    var userName=document.getElementById('username');
+    var password=document.getElementById('password');
+    var submit=document.getElementById('submit');
+
+    submit.onclick=function(){
+        var obj = {};
+        obj.name=userName.value.replace(/^ +| +$/g, "");
+        obj.password=password.value.replace(/^ +| +$/g, "");
+        objStr=JSON.stringify(obj);
+        ajax({
+            url:'/login',
+            type:'post',
+            cache:false,
+            async:true,
+            dataType:'json',
+            data:objStr,
+            success:function(data){
+                console.log(data);
+                alert(data["message"]);
+                if (data["code"] == 0) {
+                    window.location.href = "CRM.html";
+                }
+            }
+        })
+
+    }
+</script>
+</body>
+</html>
